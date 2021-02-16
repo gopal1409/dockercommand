@@ -1,0 +1,43 @@
+    1  adduser ec2-user
+    2  passwd ec2-user
+    3  ls
+    4  usermod -aG wheel ec2-user
+    5  visudo
+    6  vi /etc/cloud/cloud.cfg
+    7  vi /etc/ssh/sshd_config 
+    8  reboot
+    9  exit
+   10  docker volume ls
+   11  docker run -d --name db MYSQL_ALLOW_EMPTY_PASSWORD=true -v mysql-db:/var/lib/mysql mysql
+   12  docker run -d --name db -e MYSQL_ALLOW_EMPTY_PASSWORD=true -v mysql-db:/var/lib/mysql mysql
+   13  docker volume ls
+   14  docker ps
+   15  docker container inspect db
+   16  docker volume ls
+   17  docker volume inspect mysql-db
+   18  cd /var/lib/docker/volumes/mysql-db/_data
+   19  ls
+   20  docker ps
+   21  docker stop db
+   22  docker ps -a
+   23  docker rm db
+   24  docker ps
+   25  docker ps -a
+   26  docker volume ls
+   27  docker container run -d --name mysql -e MYSQL_ALLOW_EMPTY_PASSWORD=true -v mysql-db:/var/lib/mysql mysql
+   28  docker ps
+   29  docker volume ls
+   30  histpry
+   31  history
+   32  history > dockerstorage.txt
+   33  git add .
+   34  mv dockerstorage.txt > /root/docker/
+   35  cd /docker
+   36  cd /root
+   37  cd docker/
+   38  git add .
+   39  git commit -m "docker storage"
+   40  git push -u origin master
+   41  git status
+   42  ls
+   43  history > dockerstorage.txt
